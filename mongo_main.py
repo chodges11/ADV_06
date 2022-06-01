@@ -102,6 +102,7 @@ def load_status_updates(filename, status_collection):
         print(f"{type(error)}: {error}")
         return False
 
+
 @Timer(name="decorator")
 def add_user(user_id, email, user_name, user_last_name, user_collection):
     """
@@ -122,6 +123,7 @@ def add_user(user_id, email, user_name, user_last_name, user_collection):
         return True
     return False
 
+
 @Timer(name="decorator")
 def update_user(user_id, email, user_name, user_last_name, user_collection):
     """
@@ -139,6 +141,7 @@ def update_user(user_id, email, user_name, user_last_name, user_collection):
         return True
     return False
 
+
 @Timer(name="decorator")
 def delete_user(user_id, user_collection):
     """
@@ -151,6 +154,7 @@ def delete_user(user_id, user_collection):
     while user_collection.delete_user(user_id):
         return True
     return False
+
 
 @Timer(name="decorator")
 def search_user(user_id, user_collection):
@@ -167,6 +171,7 @@ def search_user(user_id, user_collection):
         return user_search_results
 
     return None
+
 
 @Timer(name="decorator")
 def add_status(status_id, user_id, status_text, status_collection):
@@ -187,6 +192,7 @@ def add_status(status_id, user_id, status_text, status_collection):
         return True
     return False
 
+
 @Timer(name="decorator")
 def update_status(status_id, user_id, status_text, status_collection):
     """
@@ -203,6 +209,7 @@ def update_status(status_id, user_id, status_text, status_collection):
         return True
     return False
 
+
 @Timer(name="decorator")
 def delete_status(status_id, status_collection):
     """
@@ -215,6 +222,7 @@ def delete_status(status_id, status_collection):
     while status_collection.delete_status(status_id):
         return True
     return False
+
 
 @Timer(name="decorator")
 def search_status(status_id, status_collection):
